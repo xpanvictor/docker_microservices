@@ -1,0 +1,33 @@
+.container {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 1rem;
+    justify-content: space-between;
+    background-color: rgb(56, 3, 143);
+}
+
+.item {
+    background-color: rgb(209, 177, 177);
+    color: rgb(141, 126, 126);
+    width: 30%;
+    padding: auto;
+    height: 3rem;
+    text-align: center;
+    font-weight: 800;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    display: table-cell;
+    vertical-align: middle;
+    border: 2px solid rgb(16, 24, 1);
+    border-radius: 12px;
+    box-shadow: .5px 1px rgb(209, 177, 177);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 420px) {
+    .container {
+        flex-direction: row;
+    }
+}
