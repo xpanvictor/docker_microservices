@@ -1,0 +1,29 @@
+
+html {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: rgb(209, 177, 177);
+    --secondary: rgb(56, 3, 143);
+    --accent: rgb(141, 126, 126);
+    --accent-text: rgb(16, 24, 1);
+}
+
+
+body {
+    padding: .5rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+ul>li {
+    margin-bottom: .2rem;
+}
+
+.highlight {
+    background-color: var(--accent);
+    color: var(--accent-text);
+}
