@@ -1,5 +1,5 @@
 import os.path as pathaway
-from flask import Flask, Response, jsonify, render_template, send_from_directory
+from flask import Flask, jsonify, render_template, send_from_directory, make_response
 app = Flask(__name__)
 
 root = pathaway.join(pathaway.abspath(''), 'public')
@@ -32,7 +32,9 @@ def vote():
 @app.route("/vote/<choice>")
 def choice(choice):
     data = jsonify(choice)
-    return Response(data, 200, {'Content-Type': 'application/json'})
+    res = make_response(data)
+    res.set_cookie('voted', True)
+    return res
 
 
 if __name__ == '__main__':
